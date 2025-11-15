@@ -1,6 +1,6 @@
 #include "Cuenta.hpp"
 #include "Cartera.hpp" // Incluimos Cartera para poder usar el constructor y el 'new'
-#include <new> 
+#include <iostream> 
 
 using namespace std;
 
@@ -15,8 +15,3 @@ Cuenta::Cuenta(string id, string correo, string contrasenia, double saldo)
 Cuenta::~Cuenta() {
     delete cartera; // Liberamos la memoria del objeto Cartera
 }
-
-
-
-
-
