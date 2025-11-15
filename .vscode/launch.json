@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/gcamp/OneDrive - CUNEF/2025-2026/Proyectos de programacion/proyecto_final_git/Proyecto_Pitt-Co",
-      "program": "c:/Users/gcamp/OneDrive - CUNEF/2025-2026/Proyectos de programacion/proyecto_final_git/Proyecto_Pitt-Co/build/Debug/outDebug",
+      "cwd": "c:/Users/carlo/OneDrive - CUNEF/Cunef/Tercer año/Primer cuatri/Proyectos de Programación/Proyecto_Pitt-Co",
+      "program": "c:/Users/carlo/OneDrive - CUNEF/Cunef/Tercer año/Primer cuatri/Proyectos de Programación/Proyecto_Pitt-Co/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
