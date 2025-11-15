@@ -1,30 +1,37 @@
-#ifndef CARTERA_HPP
-#define CARTERA_HPP
+#ifndef CUENTA_HPP
+#define CUENTA_HPP
 
 #include <string>
-#include <vector>
 #include <iostream>
-#include "Transaccion.hpp"
-#include "Producto.hpp"
-#include "PreciosHistoricos.hpp"
 
-// Declaración anticipada de Cuenta para evitar dependencias circulares y usarla en comprarProducto
-class Cuenta;
+// Declaración anticipada de Cartera
+class Cartera; 
 
 using namespace std;
 
-class Cartera {
+class Cuenta {
 private:
-    string nombre;
-    vector<Transaccion> transacciones;
+    string id;
+    string correo;
+    string contrasenia;
+    double saldo;
+    // La cuenta tiene una relación con una cartera (agregación)
+    Cartera* cartera; 
 
 public:
     // Constructores
-    Cartera();
-    Cartera(string nombre);
-    
-    // Getter
-    string getNombre() const { return nombre; } // Añadido getter para usar en Cuenta::mostrar
-}
+    Cuenta();
+    // Constructor completo - YA NO necesita pasar Cartera*
+    Cuenta(string id, string correo, string contrasenia, double saldo);
+
+    // DESTRUCTOR: Es necesario para liberar la memoria de la Cartera que se crea con 'new'
+    ~Cuenta(); 
+
+    // Getters
+    Cartera* getCartera() const { return cartera; }
+    double getSaldo() const { return saldo; } // Getter para el saldo
+    string getId() const { return id; }
+    string getCorreo() const { return correo; }
+};
 
 #endif
